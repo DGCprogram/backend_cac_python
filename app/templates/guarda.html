@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Guarda</title>
+    {% include 'defaults/head.html' %}
+
+</head>
+
+<body>
+    <header> {% include 'defaults/header.html' %} </header>
+    {% include 'defaults/novedad.html' %}
+    <h1>Medicacion en guarda</h1>
+
+    <div>
+        <h2>Pacientes con medicacion pendiente de retiro</h2>
+        {% for i in listado %}
+        <h3> Historia clinica {{i[1]}} - <span> Paciente {{i[2]}}</span></h3>
+        <hr>
+        {% endfor %}
+    </div>
+    <a href="/cargar_med" class="btn btn-warning">Cargar medicacion</a>
+    {% include 'defaults/footer.html' %}
+</body>
+
+</html>

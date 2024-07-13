@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carga de nueva medicacion</title>
+    {% include 'defaults/head.html' %}
+</head>
+
+<body>
+    <div class="form_med">
+        <form action="/insertar_med" method="POST">
+            <div>
+                <label for="formCarga" class="form-label">
+                    Historia clinica
+                </label>
+                <input type="number" class="form-control" id="hc" name="hc">
+            </div>
+            <div>
+                <label for="formCarga1" class="form-label">
+                    Paciente
+                </label>
+                <input type="text" class="form-control" id="paciente" name="paciente">
+            </div>
+            <div>
+                <label for="formCarga2" class="form-label">
+                    Medicacion
+                </label>
+                <input type="text" class="form-control" id="descripcion" name="descripcion">
+            </div>
+            <div>
+                <label for="formCarga" class="form-label">
+                    Cantidad
+                </label>
+                <input type="number" class="form-control" id="cantidad" name="cantidad">
+            </div>
+            <div>
+                <label for="formCarga" class="form-label">
+                    Vencimiento
+                </label>
+                <input type="date" class="form-control" id="vencimiento" name="vencimiento">
+            </div>
+            <input type="submit" class="btn btn-dark" value="Cargar Medicacion">
+
+        </form>
+    </div>
+
+
+</body>
+
+</html>
