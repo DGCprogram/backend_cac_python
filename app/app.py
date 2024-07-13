@@ -33,3 +33,11 @@ def prevencionRoute():
 @app.route("/servicios")
 def serviciosRoute():
     return render_template("servicios.html")
+
+#@app.route("/editar_med", methods=['GET'])
+#def cargarMed():
+ #   return render_template("form_nueva_med.html")
+
+#@app.route("/borrar_med", methods=['GET'])
+#def cargarMed():
+#    return render_template("form_nueva_med.html")
