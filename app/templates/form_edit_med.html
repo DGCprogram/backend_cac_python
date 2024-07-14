@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edicion de medicacion en guarda</title>
+    {% include 'defaults/head.html' %}
+</head>
+
+<body>
+    <div class="form_med bg-warning">
+
+        <form action="/update_med" method="POST">
+            <div>
+                <input type="hidden" name=pte_por_id value="{{medicacion[0]}}">
+                <label for="formCarga" class="form-label">
+                    Historia clinica
+                </label>
+                <input type="number" class="form-control" id="hc" name="hc" value="{{medicacion[1]}}">
+            </div>
+            <div>
+                <label for="formCarga1" class="form-label">
+                    Paciente
+                </label>
+                <input type="text" class="form-control" id="paciente" name="paciente" value="{{medicacion[2]}}">
+            </div>
+            <div>
+                <label for="formCarga2" class="form-label">
+                    Medicacion
+                </label>
+                <input type="text" class="form-control" id="descripcion" name="descripcion" value="{{medicacion[3]}}">
+            </div>
+            <div>
+                <label for="formCarga3" class="form-label">
+                    Cantidad
+                </label>
+                <input type="number" class="form-control" id="cantidad" name="cantidad" value="{{medicacion[4]}}">
+            </div>
+            <div>
+                <label for=" formCarga4" class="form-label">
+                    Vencimiento
+                </label>
+                <input type="date" class="form-control" id="vencimiento" name="vencimiento" value="{{medicacion[5]}}">
+            </div>
+
+            <input type="submit" class="btn btn-dark" value="Guardar cambios">
+
+        </form>
+    </div>
+
+
+</body>
+
+</html>
