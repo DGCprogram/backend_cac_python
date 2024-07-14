@@ -114,6 +114,12 @@ a {
 
 }
 
+head title {
+    font-family: "Sedan SC", serif;
+}
+
+
+
 .lab {
     color: #5C2E79;
     text-decoration: underline;
@@ -145,11 +151,11 @@ ol {
     padding: 10px 15px;
     display: block;
     border: 1px solid black;
+}
 
-    /*width: 20%;
+/*width: 20%;
     box-sizing: border-box;*/
 
-}
 
 .nav li a:hover {
     background-color: #434343;
@@ -159,7 +165,7 @@ ol {
     background-color: #434343;
 }
 
-.nav>li {
+/*.nav>li {
     float: left;
 }
 
@@ -180,7 +186,7 @@ ol {
 .nav li ul li ul {
     right: -140px;
     top: 0px;
-}
+}*/
 
 .fachada {
     width: 70%;

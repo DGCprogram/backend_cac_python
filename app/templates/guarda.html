@@ -15,11 +15,16 @@
 
     <div class="row">
         <h2>Pacientes con medicacion pendiente de retiro</h2>
-        <p>
-            A continuacion se detallan los pacientes cuya medicacion fue recepcionada por la Farmacia y se encuentra en
-            condiciones para ser retiradas. Se solicita presentarse en horario de atencion con DNI y Carnet para
-            proceder con la dispensa:
-        </p>
+        <div>
+            <p>
+                A continuacion se detallan los pacientes cuya medicacion fue recepcionada por la Farmacia y se encuentra
+                en
+                condiciones para ser retiradas. Se solicita presentarse en horario de atencion con DNI y Carnet para
+                proceder con la dispensa:
+            </p>
+        </div>
+        <div><a href="/cargar_med" class="btn btn-warning">Cargar medicacion</a></div>
+        <hr>
         {% for i in listado %}
         <!--prueba Bootstrap-->
         <div class="col-10">
@@ -39,10 +44,7 @@
             </div>
         </div>
         <!-- fin prueba-->
-        <!--
-            <div class="col-10">
-                <h3> Historia clinica {{i[1]}} - <span> Paciente {{i[2]}}</span></h3>
-            </div>-->
+
         <div class="col-2">
             <a href="/editar_med/{{i[0]}}">Editar</a>
             <a href="/eliminar_med/{{i[0]}}">Eliminar</a>
@@ -50,7 +52,7 @@
         <hr>
         {% endfor %}
     </div>
-    <a href="/cargar_med" class="btn btn-warning">Cargar medicacion</a>
+
     {% include 'defaults/footer.html' %}
 </body>
 
