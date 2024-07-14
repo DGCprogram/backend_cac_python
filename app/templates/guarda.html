@@ -5,7 +5,7 @@
 
     <title>Guarda</title>
     {% include 'defaults/head.html' %}
-
+    {% include 'defaults/scriptsjs.html'%}
 </head>
 
 <body>
@@ -15,10 +15,34 @@
 
     <div class="row">
         <h2>Pacientes con medicacion pendiente de retiro</h2>
+        <p>
+            A continuacion se detallan los pacientes cuya medicacion fue recepcionada por la Farmacia y se encuentra en
+            condiciones para ser retiradas. Se solicita presentarse en horario de atencion con DNI y Carnet para
+            proceder con la dispensa:
+        </p>
         {% for i in listado %}
+        <!--prueba Bootstrap-->
         <div class="col-10">
-            <h3> Historia clinica {{i[1]}} - <span> Paciente {{i[2]}}</span></h3>
+            <h2 class="h5" title="{{i[2]}}" data-bs-toggle="collapse" href="#dataCollapse{{i[0]}}" role="button"
+                aria-expanded="false" aria-controls="dataCollapse">
+                {{i[1]}} {{i[2]}}
+            </h2>
+            <div class="collapse" id="dataCollapse{{i[0]}}">
+                <div class="row">
+                    <div class="col bg-white bg-opacity-50 rounded text-dark p-2">
+                        Droga: {{i[3]}}
+                    </div>
+                    <div class="col-3 text.right p-2">
+                        Cantidad: {{i[4]}}
+                    </div>
+                </div>
+            </div>
         </div>
+        <!-- fin prueba-->
+        <!--
+            <div class="col-10">
+                <h3> Historia clinica {{i[1]}} - <span> Paciente {{i[2]}}</span></h3>
+            </div>-->
         <div class="col-2">
             <a href="/editar_med/{{i[0]}}">Editar</a>
             <a href="/eliminar_med/{{i[0]}}">Eliminar</a>
